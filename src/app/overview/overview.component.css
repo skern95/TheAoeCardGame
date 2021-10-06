@@ -1,0 +1,43 @@
+body {
+  color: #575757;
+}
+
+.ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+h1 {
+  color: #ff890e;
+  font-family: 'Trocchi', serif;
+  font-size: 45px;
+  font-weight: normal;
+  line-height: 48px;
+  margin: 8px;
+}
+
+mat-card {
+  border: 2px solid transparent;
+  color: #575757;
+}
+
+mat-card.active {
+  border-color: #173d7a;
+  transition: background-color 1s;
+  box-shadow: 4px 4px #173d7a;
+}
+
+mat-card.active:hover {
+  border-color: #173d7a;
+  box-shadow: 4px 4px #173d7a;
+}
+
+.pointer {
+  cursor: pointer;
+  transition: box-shadow 0.3s;
+}
+
+.pointer:hover {
+  box-shadow: 3px 3px #173d7a;
+}

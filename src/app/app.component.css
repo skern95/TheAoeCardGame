@@ -1,0 +1,64 @@
+body {
+  color: #575757;
+}
+
+h1 {
+  color: #173d7a;
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 75px;
+  font-weight: bold;
+  letter-spacing: -1px;
+  line-height: 1;
+  text-align: center;
+}
+
+.content {
+  padding: 16px;
+}
+
+#overview {
+  margin: auto;
+}
+
+.smooth-expansion-panel-open-bm {
+  animation-duration: 2.5s;
+  animation-name: smooth-panel-open-bm;
+}
+
+.fade-in {
+  animation-name: opacity-fade;
+  animation-duration: 3.5s;
+}
+
+@keyframes smooth-panel-open-bm {
+  from {
+    flex: 1 1 100%;
+    max-width: 22%;
+  }
+  to {
+    flex: 1 1 100%;
+    max-width: 60%;
+  }
+}
+
+@media (max-width: 959px) {
+  @keyframes smooth-panel-open-bm {
+    from {
+      flex: 1 1 100%;
+      max-width: 35%;
+    }
+    to {
+      flex: 1 1 100%;
+      max-width: 100%;
+    }
+  }
+}
+
+@keyframes opacity-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

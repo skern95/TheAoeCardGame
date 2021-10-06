@@ -1,0 +1,17 @@
+<div fxLayout="row wrap" fxLayoutGap="16px grid" class="title">
+    <h1 fxFlex="100%">THE AOE CARD GAME</h1>
+</div>
+<div class="content">
+    <div fxLayout="row wrap" fxLayoutGap="32px grid">
+        <div id="controls" fxFlex="40%" fxFlex.lt-md="100%">
+            <app-controls (orderChange)="orderChange($event)" [card]="card"></app-controls>
+        </div>
+        <div id="display" class="fade-in" fxFlex="60%" fxFlex.lt-md="100%" *ngIf="card.playerName!=''">
+            <app-display [card]="card"></app-display>
+        </div>
+        <div id="overview" fxFlex="60%" fxFlex.lt-md="100%"
+            [class]="card.playerName!=''?'smooth-expansion-panel-open-bm':''">
+            <app-overview (selectedCard)="selectCard($event)" [order]="order"></app-overview>
+        </div>
+    </div>
+</div>

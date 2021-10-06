@@ -1,0 +1,22 @@
+<div class="display">
+    <mat-card class="component">
+        <div fxLayout="row wrap" fxLayoutGap="16px grid">
+            <h1 fxFlex="100%">Display</h1>
+
+            <div fxFlex="100%">
+
+                <mat-card class="mat-elevation-z4">
+                    <mat-card-title class="ellipsis" style="text-overflow: ellipsis;">
+                        {{card.playerName}}
+                    </mat-card-title>
+
+                    <mat-card-content class="ellipsis">
+                        {{card.realName}}
+                        <br>
+                        {{card.asset}}
+                    </mat-card-content>
+                </mat-card>
+            </div>
+        </div>
+    </mat-card>
+</div>

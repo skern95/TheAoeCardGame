@@ -1,0 +1,20 @@
+body {
+  color: #575757;
+}
+
+h1 {
+  color: #ff890e;
+  font-family: 'Trocchi', serif;
+  font-size: 45px;
+  font-weight: normal;
+  line-height: 48px;
+  margin: 8px;
+}
+
+.component {
+  min-height: 272px;
+}
+
+mat-card {
+  color: #575757;
+}

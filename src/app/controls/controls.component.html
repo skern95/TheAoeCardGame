@@ -1,0 +1,20 @@
+<div class="controls">
+  <mat-card class="component">
+    <div fxLayout="row wrap" fxLayoutGap="16px grid">
+      <h1 class="center" fxFlex="100%">Controls</h1>
+      <div fxFlex="50%" *ngFor="let order of orders" class="center">
+        <button matTooltip={{order.name}} matTooltipPosition="above" mat-icon-button class="circle"
+          [attr.aria-label]="order.name" (click)="orderChanged(order)">
+          <mat-icon class={{order.class}}>{{order.icon}}</mat-icon>
+        </button>
+      </div>
+      <div fxFlex="100%" class="center">
+        <span [matTooltip]="'Select a Card first'" [matTooltipPosition]="'below'"
+          [matTooltipDisabled]="card.playerName!=''">
+          <button [disabled]="card.playerName==''" (click)="submit();" mat-raised-button
+            class="noselect" [matTooltip]="'Submit displayed Card'" [matTooltipPosition]="'below'">Submit</button>
+        </span>
+      </div>
+    </div>
+  </mat-card>
+</div>

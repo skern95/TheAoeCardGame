@@ -1,0 +1,23 @@
+<div class="overview">
+  <div fxLayout="row wrap" fxLayoutGap="16px grid">
+    <div fxFlex=100%>
+      <h1>Overview</h1>
+    </div>
+    <div fxFlex="33%" *ngFor='let cardData of $any(getCardData() | async) | sortPipe:order? order.order : "";'>
+
+      <mat-card class="mat-elevation-z4 ellipsis pointer" [class.active]="selectedPlayer === cardData.playerName"
+        (click)="cardSelected(cardData);selectedPlayer = cardData.playerName">
+        <mat-card-title class="ellipsis" style="text-overflow: ellipsis;">
+          {{cardData.playerName}}
+        </mat-card-title>
+
+        <mat-card-content class="ellipsis">
+          {{cardData.realName}}
+          <br>
+          {{cardData.asset}}
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+
+</div>
